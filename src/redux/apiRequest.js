@@ -102,3 +102,5 @@ export const DeleteDoc = async (id, dispatch, navigate, accessToken) => {
         dispatch(deleteDocFail());
     }
 };
+
+export const find = async (dispatch) => {};
