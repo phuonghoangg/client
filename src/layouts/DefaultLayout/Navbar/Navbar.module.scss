@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    padding-top: 50px;
+    width: 100%;
+    justify-content: center;
+}
+.inline {
+    display: flex;
+    width: 1280px;
+    height: 325px;
+    background: white;
+}
+.inline-left {
+    width: 215px;
+}
+
+.inline-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 850px;
+    background: url('https://media.store123doc.com/images/web_2/123job-min.jpg');
+    background-size: contain;
+    cursor: pointer;
+}
+.swap-img1 {
+    border-radius: 50%;
+    border: 1px solid rgb(41, 158, 212);
+    width: 15px;
+    height: 15px;
+    background-color: rgb(41, 158, 212);
+}
+.swap-img2 {
+    margin-left: 4px;
+    border-radius: 50%;
+    border: 1px solid rgb(41, 158, 212);
+    width: 15px;
+    height: 15px;
+    background-color: rgb(41, 158, 212);
+}
+.inline-right {
+}

@@ -1,0 +1,55 @@
+.wrapper {
+    width: 304px;
+    height: 100%;
+}
+
+.title {
+    background-color: #53a8a5;
+    color: white;
+    font-size: 1.8rem;
+
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.total-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.item-title {
+    color: #333333;
+    font-size: 1.6rem;
+    padding-left: 25px;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    margin: 5px 15px;
+}
+
+.card-author {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 15px;
+    color: green;
+}
+
+.card-view {
+    display: flex;
+    justify-content: space-around;
+
+    .text {
+        padding-left: 14px;
+
+        .text-title {
+            font-size: 1.2rem;
+            color: #a0aec0;
+        }
+        .text-img {
+            width: 14px;
+            height: 14px;
+            padding-right: 3px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.wrapper {
+    min-height: inherit;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}

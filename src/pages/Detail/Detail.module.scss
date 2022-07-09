@@ -1,0 +1,85 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+}
+.viewer {
+    height: 600px;
+    width: 940px;
+    position: inherit;
+    border: 1px solid #333333;
+}
+.worker {
+    display: block;
+}
+.title {
+    color: #333333;
+    font-weight: 600;
+    font-size: 2.4rem;
+    padding-left: 8px;
+}
+.header-author {
+    width: 74%;
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0 8px;
+}
+
+.left {
+    display: flex;
+    margin: 0 16px 8px 0;
+}
+
+.header-user {
+    margin: 0 0 0 8px;
+
+    .user,
+    span {
+        color: #a0aec0;
+        font-size: 1.2rem;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    span {
+        &:hover {
+            color: #00a888;
+        }
+    }
+}
+
+.card-view {
+    display: flex;
+    margin: 8px 0px;
+    padding: 0px 8px;
+    .text {
+        padding-left: 14px;
+
+        .text-title {
+            font-size: 1.2rem;
+            color: #a0aec0;
+        }
+        .text-img {
+            width: 14px;
+            height: 14px;
+            padding-right: 3px;
+        }
+    }
+}
+
+.btn-them {
+    height: 40px;
+    width: inherit;
+    font-size: 1.4rem;
+    color: #a0aec0;
+    padding: 8px;
+    &:hover {
+        color: #00a888;
+        border-color: #00a888;
+    }
+}
+.btn-xoa {
+    height: 40px;
+    width: inherit;
+    font-weight: 300;
+}

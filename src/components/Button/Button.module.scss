@@ -1,0 +1,57 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    min-height: 20px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 4px 16px;
+    margin-left: 10px;
+}
+
+.naptien {
+    color: white;
+    background-color: #fa0;
+
+    &:hover {
+        box-shadow: inset 0 0 10px #ccc;
+    }
+}
+.tailen {
+    color: white;
+    background-color: #00a888;
+
+    &:hover {
+        box-shadow: inset 0 0 10px #ccc;
+    }
+}
+.outline {
+    width: 100px;
+    height: 28px;
+    border: 1px solid #e2e8f0;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.icon {
+    margin-left: 18px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    height: 48px;
+    width: 20px;
+    color: #fa0;
+    &:hover {
+        color: yellow;
+    }
+}
+.icon-btn {
+    padding-right: 4px;
+}
+.title {
+}

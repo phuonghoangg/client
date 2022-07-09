@@ -1,0 +1,21 @@
+.wrapper {
+    width: 1280px;
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.title-upload {
+    padding-top: 20px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.body-upload {
+    width: 900px;
+    height: 513px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #f0f0f0;
+}
