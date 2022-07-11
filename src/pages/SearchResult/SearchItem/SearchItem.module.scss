@@ -1,0 +1,39 @@
+
+.item{
+    background-color: #fff;
+    display: flex;
+    height: inherit;
+    padding-bottom: 10px;
+
+}
+.item-img{
+    width: 115px;
+    img{
+        width: 74px;
+        height: 95px;
+    }
+}
+.item-show{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1%;
+}
+
+
+.card-view {
+    display: flex;
+    .text {
+        padding-right: 14px;
+
+        .text-title {
+            font-size: 1.2rem;
+            color: #a0aec0;
+        }
+        .text-img {
+            width: 14px;
+            height: 14px;
+            padding-right: 3px;
+        }
+    }
+}

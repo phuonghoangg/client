@@ -16,12 +16,18 @@ import {
     deleteDocFail,
     deleteDocStart,
     deleteDocSuccess,
+    findDocFail,
+    findDocStart,
+    findDocSuccess,
     getAllDocFail,
     getAllDocStart,
     getAllDocSuccess,
     getDocFail,
     getDocStart,
     getDocSuccess,
+    updateDocFail,
+    updateDocStart,
+    updateDocSuccess,
 } from './docSlice';
 
 export const loginUser = async (user, dispatch, navigate) => {
@@ -103,4 +109,24 @@ export const DeleteDoc = async (id, dispatch, navigate, accessToken) => {
     }
 };
 
-export const find = async (dispatch) => {};
+
+export const findDoc = async (id,dispatch) => {
+    dispatch(findDocStart())
+    try {
+        const res = await axios.get(`http://localhost:3005/v1/doc/f/${id}`)
+        dispatch(findDocSuccess(res.data))
+    } catch (error) {
+        dispatch(findDocFail())
+    }
+};
+
+export const UpdateDoc = async (id,dispatch,updateValue)=>{
+    dispatch(updateDocStart())
+    try {
+        await axios.put(`http://localhost:3005/v1/doc/${id}`,updateValue)
+        const res = await axios.get('http://localhost:3005/v1/doc/');
+        dispatch(updateDocSuccess(res.data));
+    } catch (error) {
+        dispatch(updateDocFail())
+    }
+}

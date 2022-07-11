@@ -5,6 +5,7 @@ import ListDoc from '~/pages/ListDoc';
 import Login from '~/pages/Login';
 import Logout from '~/pages/Logout/Logout';
 import Register from '~/pages/Register';
+import SearchResult from '~/pages/SearchResult';
 import Upload from '~/pages/Upload';
 
 const publicRoutes = [
@@ -14,6 +15,7 @@ const publicRoutes = [
     { path: '/detail/:id', component: Detail, layout: OnlyHeader },
     { path: '/login', component: Login, layout: OnlyHeader },
     { path: '/register', component: Register, layout: OnlyHeader },
+    { path: '/s/:id', component: SearchResult, layout: OnlyHeader },
     { path: '/logout', component: Logout },
 ];
 

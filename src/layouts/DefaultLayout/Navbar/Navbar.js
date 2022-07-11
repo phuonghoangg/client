@@ -44,12 +44,12 @@ function Navbar() {
                         return <MenuLeft key={index} data={menu} setBackground={setBackground} />;
                     })}
                 </div>
-                <div className={cx('inline-main')}>
+                <a  href='https://123job.vn/cv/m%E1%BA%ABu-cv' rel="noreferrer" className={cx('inline-main')} target="_blank">
                     <div>
                         <button className={cx('swap-img1')}></button>
                         <button className={cx('swap-img2')}></button>
                     </div>
-                </div>
+                </a>
                 <div className={cx('inline-right')}></div>
             </div>
         </nav>

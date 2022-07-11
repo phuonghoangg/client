@@ -24,13 +24,15 @@ function Detail() {
     //id lay tu document DB
     let { id } = useParams();
     const accessToken = user?.accessToken;
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     useEffect(() => {
+        
         getAnDoc(id, dispatch);
+      
     }, [dispatch, id]);
+
 
     const handleClick = () => {
         DeleteDoc(id, dispatch, navigate, accessToken);
@@ -86,7 +88,7 @@ function Detail() {
                         <Button outline className={cx('btn-them')}>
                             Thêm vào bộ sưu tập
                         </Button>
-                        {user ? (
+                        {user?.isAdmin   ? (
                             <>
                                 {' '}
                                 <Button onClick={handleClick} naptien className={cx('btn-xoa')}>
@@ -107,7 +109,7 @@ function Detail() {
             <div className={cx('viewer')}>
                 {doc?.dataPDF && (
                     <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
-                        <Viewer fileUrl={doc?.dataPDF} plugins={[defaultLayoutPluginInstance]}></Viewer>
+                        <Viewer fileUrl={doc?.dataPDF}  plugins={[defaultLayoutPluginInstance]}></Viewer>
                     </Worker>
                 )}
             </div>

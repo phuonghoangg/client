@@ -13,6 +13,11 @@ const docSlice = createSlice({
             isFetching: false,
             error: false,
         },
+        resultFindDocs:{
+            allDoc: null,
+            isFetching: false,
+            error: false,
+        },
         msg: '',
     },
     reducers: {
@@ -59,10 +64,33 @@ const docSlice = createSlice({
             state.docs.isFetching = false;
             state.docs.error = true;
         },
+        findDocStart:(state)=>{
+            state.resultFindDocs.isFetching = true;
+        },
+        findDocSuccess:(state,action)=>{
+            state.resultFindDocs.isFetching = false;
+            state.resultFindDocs.allDoc = action.payload;
+        },
+        findDocFail:(state)=>{
+            state.resultFindDocs.isFetching = false
+            state.resultFindDocs.error = true
+        },
+        updateDocStart:(state)=>{
+            state.docs.isFetching = true;
+        },
+        updateDocSuccess:(state,action)=>{
+            state.docs.isFetching = false;
+            state.docs.allDoc = action.payload;
+        },
+        updateDocFail:(state)=>{
+            state.docs.isFetching = false;
+            state.docs.error = false;
+        },
     },
 });
 
-export const {
+export const {findDocSuccess,findDocFail,updateDocFail,updateDocSuccess,updateDocStart,
+    findDocStart,
     addDocStart,
     addDocSuccess,
     addDocFail,

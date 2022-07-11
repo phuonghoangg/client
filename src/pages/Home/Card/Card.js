@@ -1,12 +1,22 @@
 import classNames from 'classnames/bind';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { UpdateDoc } from '~/redux/apiRequest';
 import styles from './Card.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Card({ data }) {
+    const dispatch = useDispatch()
+    const handleClick = () =>{
+        let viewUpdate = data.viewer +1;
+        const updateValue = {
+            viewer : viewUpdate,
+        }
+        UpdateDoc(data._id,dispatch,updateValue)
+    }
     return (
-        <Link className={cx('wrapper')} to={`/detail/${data._id}`}>
+        <Link className={cx('wrapper')} to={`/detail/${data._id}`} onClick={handleClick} >
             <div className={cx('card-img')}>
                 <img className={cx('data-img')} src={data.image} alt="" />
             </div>

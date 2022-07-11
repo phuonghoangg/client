@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Menu from '~/components/WrapperTippy/Menu';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import Search from './Search';
 
 const cx = classNames.bind(styles);
 
@@ -61,7 +62,6 @@ const PROFILE_MENU = [
 ];
 
 function Header({ className }) {
-    const [item, setItem] = useState('Tài liệu');
     const user = useSelector((state) => state.auth.login.currentUser);
 
     const navigate = useNavigate();
@@ -95,33 +95,7 @@ function Header({ className }) {
                         height="50px"
                     />
                 </a>
-                <div className={cx('search')}>
-                    <div className={cx('select-option')}>
-                        <ul>
-                            <li className={cx('title-option')}>
-                                <div className={cx('title')}>
-                                    {item} <span className={cx('icon-drop')}>&#9662;</span>
-                                </div>
-                                <ul className={cx('dropdown')}>
-                                    {menu.map((item, index) => {
-                                        return (
-                                            <li key={index} className={cx('li-item')}>
-                                                <div href="/" onClick={() => setItem(item)}>
-                                                    {item}
-                                                </div>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <input placeholder="Tìm kiếm..." spellCheck={false} />
-                    <button className={cx('search-btn')}>
-                        <SearchIcon />
-                    </button>
-                </div>
+                <Search />
                 <div className={cx('actions')}>
                     <Button naptien>NẠP TIỀN</Button>
                     <Button onClick={handleUp} tailen>
