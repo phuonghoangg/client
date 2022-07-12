@@ -113,7 +113,7 @@ function Header({ className }) {
                                         alt=""
                                         src="https://media.store123doc.com/images/default/user_small.png"
                                     />
-                                    <span>Hi: {user.username}</span>
+                                    <span>Hi: {user.author}</span>
                                 </button>
                             </Menu>
                             <Button className={cx('bell')}>

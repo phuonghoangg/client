@@ -1,10 +1,12 @@
-import classNames from 'classnames/bind';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import {gapi} from 'gapi-script'
 import { Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '~/redux/apiRequest';
+import classNames from 'classnames/bind';
 import styles from './Register.module.scss';
+import RegisterGoogle from './RegisterGoogle';
 
 const cx = classNames.bind(styles);
 
@@ -27,6 +29,16 @@ function Register() {
         };
         registerUser(newUser, dispatch, navigate);
     };
+
+    useEffect(()=>{
+        function start(){
+          gapi.client.init({
+            clientId:"400182014504-o1u4v63usf1shqimgh40v38lc8hdffb6.apps.googleusercontent.com",
+            scope:""
+          })
+        };
+        gapi.load("client:auth2",start)
+      })
     return (
         <div className={cx('wrapper')}>
             <div className={cx('register-title')}> Sign up </div>
@@ -80,6 +92,9 @@ function Register() {
                     <Button variant="success" size="lg" type="submit">
                         Register !
                     </Button>
+                </div>
+                <div>
+                    <RegisterGoogle />
                 </div>
             </Form>
         </div>

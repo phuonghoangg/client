@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useDispatch } from 'react-redux/';
 import { loginUser } from '~/redux/apiRequest';
 import { Link, useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Login.module.scss';
 import { Button, Form } from 'react-bootstrap';
+import {gapi} from 'gapi-script'
+import LoginGoogle from './LoginGoogle';
 
 const cx = classNames.bind(styles);
 function Login() {
@@ -21,8 +23,20 @@ function Login() {
         };
         loginUser(newUser, dispatch, navigate);
     };
+
+    useEffect(()=>{
+        function start(){
+          gapi.client.init({
+            clientId:"400182014504-o1u4v63usf1shqimgh40v38lc8hdffb6.apps.googleusercontent.com",
+            scope:""
+          })
+        };
+        gapi.load("client:auth2",start)
+      })
     return (
         <div className={cx('wrapper')}>
+            
+
             <div className={cx('title')}>Login</div>
             <Form onSubmit={handleLogin}>
                 <Form.Group>
@@ -49,6 +63,10 @@ function Login() {
                     <Button variant="success" size="lg" type="submit">
                         submit
                     </Button>
+                   
+                </div>
+                <div style={{textAlign:"center"}}>
+                    <LoginGoogle />
                 </div>
             </Form>
 
