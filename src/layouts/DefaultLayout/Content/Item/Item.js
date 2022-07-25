@@ -5,12 +5,12 @@ const cx = classNames.bind(styles);
 function Item({ data }) {
     return (
         <div className={cx('wrapper')}>
-            <h4 className={cx('title')}>{data.title}</h4>
+            <h4 className={cx(`title-${data.type}`)}>{data.title}</h4>
             <div className={cx('total-item')}>
                 {data.doc.map((item, index) => {
                     return (
                         <div key={index} className={cx('item')}>
-                            <div className={cx('item-title')}>{item.title}</div>
+                            <div className={cx(`item-title`)}>{item.title}</div>
                             <div className={cx('card-view')}>
                                 <div className={cx('text')}>
                                     <img

@@ -2,14 +2,28 @@
     width: 304px;
     height: 100%;
 }
-
-.title {
-    background-color: #53a8a5;
+@mixin title {
     color: white;
     font-size: 1.8rem;
-
     padding: 16px;
     border-radius: 5px;
+}
+.title-english {
+    background-color: #53a8a5;
+    @include title;
+}
+
+.title-gddt {
+    background-color: #a8529f;
+    @include title;
+}
+.title-ktcn {
+    background-color: #9fa854;
+    @include title;
+}
+.title-cntt {
+    background-color: #49a85f;
+    @include title;
 }
 
 .total-item {
