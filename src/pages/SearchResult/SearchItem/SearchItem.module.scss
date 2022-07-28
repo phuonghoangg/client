@@ -7,10 +7,13 @@
 
 }
 .item-img{
+    
     width: 115px;
     img{
+        border: 1px solid #a0aec0;
         width: 74px;
         height: 95px;
+        object-fit: cover;
     }
 }
 .item-show{

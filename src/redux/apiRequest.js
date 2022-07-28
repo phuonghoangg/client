@@ -110,10 +110,10 @@ export const DeleteDoc = async (id, dispatch, navigate, accessToken) => {
 };
 
 
-export const findDoc = async (id,dispatch) => {
+export const findDoc = async (id,dispatch,page) => {
     dispatch(findDocStart())
     try {
-        const res = await axios.get(`http://localhost:3005/v1/doc/f/${id}`)
+        const res = await axios.get(`http://localhost:3005/v1/doc/f/${id}?page=${page}`)
         dispatch(findDocSuccess(res.data))
     } catch (error) {
         dispatch(findDocFail())

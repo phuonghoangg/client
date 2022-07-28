@@ -17,13 +17,20 @@ function SearchResult() {
 
     useEffect(()=>{
         findDoc(id,dispatch)
-    },[id,dispatch])
-    
+    },[])
+
+    const handlePage = (e) =>{
+       let page = e.target.value
+       findDoc(id,dispatch,page)
+  
+    }
     return <div className={cx('wrapper')}>
         <div className={cx('search-top')}>Kết quả tìm kiếm với từ khóa: {id}</div>
         {doc.allDoc?.map((item,index)=>{
             return <SearchItem key={index} data={item}/>
         })}
+        <button value="1" onClick={handlePage} style={{}}>1</button>
+        <button value="2" onClick={handlePage}>2</button>
     </div>
 }
 export default SearchResult;

@@ -115,9 +115,9 @@ function Detail() {
             </div>
             <div className={cx('info-doc')}>
                 <h1>Thông tin tài liệu</h1>
-                <div>Ngày đăng: {doc?.updatedAt}</div>
-                <div>
-                    mô tả: <br /> {doc?.description}
+                <div className={cx('description-doc')}>
+                    <div>Ngày đăng: {doc?.updatedAt}</div>
+                    <div className={cx('mota')}> mô tả: {doc?.description}</div>
                 </div>
             </div>
         </div>

@@ -51,9 +51,9 @@
 .card-view {
     display: flex;
     margin: 8px 0px;
-    padding: 0px 8px;
+   
     .text {
-        padding-left: 14px;
+        padding-left : 8px;
 
         .text-title {
             font-size: 1.2rem;
@@ -82,4 +82,15 @@
     height: 40px;
     width: inherit;
     font-weight: 300;
+}
+
+.info-doc{
+    height: inherit;
+    width: 74%;
+    .description-doc{
+        width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    }
 }

@@ -7,3 +7,19 @@
     color: #333333;
     font-size: 2.4rem;
 }
+
+.wrapper{
+    button{
+        display: inline-block;
+        margin: 0 5px 0 0;
+        padding: 5px 10px;
+        line-height: 20px;
+        background-color: #ddd;
+        color: #333;
+        border-radius: 2px;
+        font-size: 15px;
+        border: 1px solid transparent;
+
+       
+    }
+}
