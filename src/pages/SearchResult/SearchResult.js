@@ -29,6 +29,7 @@ function SearchResult() {
         {doc.allDoc?.map((item,index)=>{
             return <SearchItem key={index} data={item}/>
         })}
+                         {/*api trả về biến count để tạo số lượng btn. mà lười qé nên set cứng :v*/}
         <button value="1" onClick={handlePage} style={{}}>1</button>
         <button value="2" onClick={handlePage}>2</button>
     </div>
